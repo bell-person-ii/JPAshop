@@ -1,6 +1,7 @@
 package jpabook.jpashop.repository;
 
 import jpabook.jpashop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,10 +10,10 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    @PersistenceContext
-    private EntityManager em;
+    private final EntityManager em;
 
     public Long save(Member member){
         em.persist(member);
@@ -20,7 +21,7 @@ public class MemberRepository {
     }
 
     // 단건 조회 find(타입,key)
-    public Member find(Long id){
+    public Member findOne(Long id){
         return em.find(Member.class,id);
     }
 
