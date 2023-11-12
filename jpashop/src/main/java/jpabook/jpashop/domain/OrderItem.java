@@ -28,4 +28,15 @@ public class OrderItem {
 
     private  int count; //주문수량
 
+    // === 비즈니스 로직 === //
+
+    public void cancel() {
+        getItem().addStock(count);
+    }
+
+    public int getTotalPrice(){
+        return orderPrice * count;
+    }
+
+
 }
