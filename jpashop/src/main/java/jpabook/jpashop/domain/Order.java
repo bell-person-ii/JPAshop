@@ -1,6 +1,8 @@
 package jpabook.jpashop.domain;
 
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -12,6 +14,7 @@ import java.util.List;
 @Table(name = "orders")
 @Getter
 @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED) // new Order()를 통한 인스턴스 생성 막기: 생성 방식 통일 목적
 public class Order {
 
     @Id

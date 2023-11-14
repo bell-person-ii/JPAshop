@@ -1,7 +1,9 @@
 package jpabook.jpashop.domain;
 
 import jpabook.jpashop.domain.item.Item;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,6 +11,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED) // new OrderItem()를 통한 인스턴스 생성 막기: 생성 방식 통일 목적
 public class OrderItem {
 
     @Id

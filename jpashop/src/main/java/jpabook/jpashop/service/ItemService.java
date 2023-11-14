@@ -28,6 +28,6 @@ public class ItemService {
 
     @Transactional(readOnly = true)
     public Item findOne(Long id){
-        return itemRepository.find(id);
+        return itemRepository.findOne(id);
     }
 }

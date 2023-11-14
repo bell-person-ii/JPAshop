@@ -12,8 +12,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jpashop.jpashop.main" target="17" />
-      <module name="jpashop.jpashop.test" target="17" />
+      <module name="jpashop.jpashop.main~1" target="17" />
+      <module name="jpashop.jpashop.test~1" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
