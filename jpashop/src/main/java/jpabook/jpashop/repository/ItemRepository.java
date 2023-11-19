@@ -26,7 +26,7 @@ public class ItemRepository {
     }
 
     // id를 통한 아이템 단일 조회
-    public Item find(Long id){
+    public Item findOne(Long id){
         return em.find(Item.class,id);
     }
 
