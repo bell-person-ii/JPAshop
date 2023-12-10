@@ -54,4 +54,13 @@ public class MemberService {
         return result;
     }
     //<-- 회원 단건 조회 by id
+
+    public void update(Long id, String name){
+        Member member = memberRepository.findOne(id);
+        member.setName(name);
+    }
+
+    public List<Member> findAll(){
+        return memberRepository.findAll();
+    }
 }
